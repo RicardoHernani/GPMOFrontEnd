@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { PesquisaCodigoDTO } from '../../models/pesquisa_codigo.dto';
+import { ReferenciaDTO } from '../../models/referencia.dto';
 
 @IonicPage()
 @Component({
@@ -9,8 +9,11 @@ import { PesquisaCodigoDTO } from '../../models/pesquisa_codigo.dto';
 })
 export class PesquisarPage {
 
-  findCodigo : PesquisaCodigoDTO = {
-    codigo: null
+  findCodigo : ReferenciaDTO = {
+    codigo: null,
+    descricao: '',
+    pontos: null,
+    valor: null
   };
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
