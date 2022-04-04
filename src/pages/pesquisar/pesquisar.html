@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Pesquisar Referências</ion-title>
+    <ion-title>Pesquisa de Referência</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -11,12 +11,8 @@
   <form>
     <ion-item>
       <ion-label stacked>Código</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input [(ngModel)]="findCodigo.codigo" name="codigo" type=number></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label stacked>Descrição</ion-label>
-        <ion-input type="text"></ion-input>
-    </ion-item>
-    <button ion-button block>Pesquisar</button>
+    <button ion-button block (click)="search()">Pesquisar</button>
   </form>
 </ion-content>
