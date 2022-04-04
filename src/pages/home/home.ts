@@ -34,7 +34,8 @@ export class HomePage {
     .subscribe(response => {
       this.auth.successfulLogin(response.headers.get('Authorization'));
       this.navCtrl.setRoot('PesquisarPage');
-    })
+    },
+    error => {});
    
   }
 
